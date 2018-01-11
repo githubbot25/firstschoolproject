@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Genius Hour!</title>
+    <link rel="icon" type="image/png" href="images/icon.jpg" />
+    <link rel="stylesheet" type="text/css" href="STYLESHEET.css" />
+</head>
+<body style="margin-left:0px; margin-top:0px; margin-right: 0px; padding: 0px;">
+    <div>
+        <ul>
+            <li><a href="#home" class="oneline">Home</a>
+            <li><a href="RPS.html">Rock Paper <br> Scissors</a>		
+			<li class="active"><a href="NUMGAME.html">Number <br> Game</a>
+        </ul>
+    </div>
+	<h1>Luca's Supa Cool Number Game!</h1>
+	<p>So it's a game where you try to guess a number between one and <br>one hundred.  It tells you if you're too high or too low. Guess below.</p> 
+	<button onClick="newNumber()">Choose new number</button>
+	<br> <input type="text" id="guess" style="margin-left:50px;"/> <button onClick="compare()">Guess!</button>
+	<p id="yourNumber"> </p>
+	<p id="compResults"> </p>
+	<p id="theyPicked"> </p>
+	<script>
+		var number;
+		var uNumber;
+		var numOfTries = 0;
+		var i = 0;
+		function newNumber() {
+			numOfTries = 0;
+			number = Math.random();
+			number = (number*100);
+			number = Math.ceil(number);
+			document.getElementById("yourNumber").innerHTML = " ";
+			document.getElementById("compResults").innerHTML = " ";
+			document.getElementById("theyPicked").innerHTML = " ";
+		//	alert(number);
+		}
+		function compare() {
+			numOfTries += 1;
+			var para = document.createElement("P");
+			para.id = numOfTries;
+			alert(para.id);
+			document.body.appendChild(para);
+			//alert(number);
+			uNumber = document.getElementById("guess").value;
+			//alert(uNumber);
+			//document.getElementById("yourNumber").innerHTML = "You Guessed " + uNumber + "!";
+			if (uNumber < number) {
+				alert("yours was smaller");
+				document.getElementById(numOfTries).innerHTML = uNumber + " was too small!";
+			} if (uNumber == number) {
+				alert("you were rite");
+				document.getElementById("compResults").innerHTML = "You were right! Reload to get rid of this and play again!";
+				document.getElementById(numOfTries).innerHTML = "You nailed it with " + uNumber+ "! It took you a mere " + numOfTries + " turns!";
+			} if (uNumber > number) {
+				alert("yours was bigger");
+				document.getElementById(numOfTries).innerHTML = uNumber + " was too large!";
+			}
+		}
+	</script>
+</body>
+</html>

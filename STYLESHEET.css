@@ -1,0 +1,89 @@
+body {
+    background-color: #7ec0ee;
+}
+p, h1, h2, h3, h4, h5, h6, li {
+    font-family: Sans-serif;
+    margin-left: 50px;
+    color: #6B4423;
+}
+img {
+    margin-left: 50px;
+}
+.center {
+    margin: auto;
+    border: 3px solid grey;
+    padding: 10px;
+    width: 50%:
+}
+iframe { margin: auto; margin-left: 50px; }
+p.20px, li.20px { font-size: 20px; }
+button.accordion {
+    background-color: #DCDCDC;
+    color: #6B4423;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button.accordion.active, button.accordion:hover, button.active, button:hover {
+    background-color: #d3d3d3;
+}
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+button { background-color: #DCDCDC; color: #6B4423; cursor: pointer; padding: 18px; text-align: center; border: none; outline: none; margin-left: 50px; }
+input.standardbutton {
+    background-color: white;
+    color: #6B4423;
+    cursor: pointer;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+.standardform {
+    font-family: Sans-serif;
+    font-size: 20px;
+    color: #6B4423;
+    margin-left: 50px;
+}
+input.text { margin-left: 50px; }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+li {
+    float: left;
+    background-color: grey;
+}
+
+li a {
+    display: block;
+    color: #DCDCDC;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #4A4A4A;
+}
+div {
+    color: grey;
+}
+a.oneline {
+	Padding: 23.5px;
+}
+.active {
+	background-color: #902525;
+}
